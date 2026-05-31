@@ -1,7 +1,0 @@
-    public void megalloHozzaadas(Megallo megallo) {
-        this.megallok.add(megallo);
-    }
-
-    public void indulasHozzaadas(LocalTime ido) {
-        this.indulasiIdok.add(ido);
-    }
