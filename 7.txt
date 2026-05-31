@@ -1,0 +1,12 @@
+    public Megallo megalloKeresVagyLetrehoz(String nev) {
+        for (Megallo m : osszesMegallo) {
+            if (m.getNev().equalsIgnoreCase(nev)) return m;
+        }
+        Megallo uj = new Megallo(nev);
+        osszesMegallo.add(uj);
+        return uj;
+    }
+
+    public void jaratHozzaadas(Jarat jarat) {
+        this.jaratok.add(jarat);
+    }
