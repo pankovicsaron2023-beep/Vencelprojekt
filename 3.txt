@@ -1,0 +1,6 @@
+    public String getId() { return id; }
+    public String getTipus() { return tipus; }
+    public List<Megallo> getMegallok() { return megallok; }
+    public List<LocalTime> getIndulasiIdok() { return indulasiIdok; }
+    public int getKesesPerc() { return kesesPerc; }
+    public void setKesesPerc(int kesesPerc) { this.kesesPerc = kesesPerc; }
