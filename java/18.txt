@@ -1,0 +1,27 @@
+    private void utvonalTervezoMenu() {
+        System.out.print("Induló megálló: ");
+        String honnan = scanner.nextLine();
+        System.out.print("Cél megálló: ");
+        String hova = scanner.nextLine();
+
+        List<String> lehetosegek = manager.utvonalTervezes(honnan, hova);
+        System.out.println("\n--- TALÁLATOK ---");
+        if (lehetosegek.isEmpty()) {
+            System.out.println("Nincs közvetlen járat.");
+        } else {
+            lehetosegek.forEach(System.out.println);
+        }
+    }
+
+    private void kesesSzimulacioMenu() {
+        System.out.print("Járat száma: ");
+        String id = scanner.nextLine();
+        System.out.print("Késés (perc): ");
+        int perc = szamotBeolvas();
+
+        if (manager.kesesBeallitas(id, perc)) {
+            System.out.println("[Sikeres] Késés rögzítve.");
+        } else {
+            System.out.println("[Hiba] Nem található ilyen járat.");
+        }
+    }

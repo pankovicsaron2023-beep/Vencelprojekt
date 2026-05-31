@@ -1,0 +1,15 @@
+    public Jarat jaratKeres(String id) {
+        for (Jarat j : jaratok) {
+            if (j.getId().equalsIgnoreCase(id)) return j;
+        }
+        return null;
+    }
+
+    public boolean kesesBeallitas(String jaratId, int perc) {
+        Jarat j = jaratKeres(jaratId);
+        if (j != null) {
+            j.setKesesPerc(perc);
+            return true;
+        }
+        return false;
+    }

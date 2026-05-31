@@ -1,0 +1,15 @@
+package kozlekedes;
+
+public class Futtato {
+    public static void main(String[] args) {
+        KozlekedesManager manager = new KozlekedesManager();
+        
+        AdatKezelo.adatokBetoltese(manager);
+        AlapAdatGenerator.generalAlapAdatokat(manager);
+
+        MenuRendszer menu = new MenuRendszer(manager);
+        menu.indit();
+
+        AdatKezelo.adatokMentese(manager);
+    }
+}

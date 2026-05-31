@@ -1,0 +1,13 @@
+    public boolean erintiAMegallot(String megalloNev) {
+        for (Megallo m : megallok) {
+            if (m.getNev().equalsIgnoreCase(megalloNev)) return true;
+        }
+        return false;
+    }
+
+    public int getMegalloIndex(String megalloNev) {
+        for (int i = 0; i < megallok.size(); i++) {
+            if (megallok.get(i).getNev().equalsIgnoreCase(megalloNev)) return i;
+        }
+        return -1;
+    }

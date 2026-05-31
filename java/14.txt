@@ -1,0 +1,10 @@
+  private void menuKiiras() {
+        System.out.println("\n=== TÖMEGKÖZLEKEDÉSI RENDSZER ===");
+        System.out.println("1. Menetrend megtekintése járatok szerint");
+        System.out.println("2. Menetrend megtekintése megállók szerint");
+        System.out.println("3. Útvonaltervezés (átszállás nélkül)");
+        System.out.println("4. Késés szimuláció (Admin)");
+        System.out.println("5. Új járat felvétele (Admin)");
+        System.out.println("0. Kilépés és mentés");
+        System.out.print("Válasszon opciót: ");
+    }

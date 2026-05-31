@@ -1,0 +1,29 @@
+   private void menetrendJaratSzerint() {
+        System.out.println("\n--- JÁRATOK ---");
+        for (Jarat j : manager.getJaratok()) {
+            System.out.println(j.getTipus() + " " + j.getId() + " [Késés: " + j.getKesesPerc() + " perc]");
+            System.out.print("  Megállók: ");
+            for (int i = 0; i < j.getMegallok().size(); i++) {
+                System.out.print(j.getMegallok().get(i) + (i < j.getMegallok().size() - 1 ? " -> " : ""));
+            }
+            System.out.print("\n  Indulások: ");
+            for (java.time.LocalTime t : j.getIndulasiIdok()) {
+                System.out.print(t.plusMinutes(j.getKesesPerc()) + "  ");
+            }
+            System.out.println("\n");
+        }
+    }
+
+    private void menetrendMegalloSzerint() {
+        System.out.print("Adja meg a megálló nevét: ");
+        String megallo = scanner.nextLine();
+        System.out.println("\n--- Érintő járatok ---");
+        boolean van = false;
+        for (Jarat j : manager.getJaratok()) {
+            if (j.erintiAMegallot(megallo)) {
+                System.out.println("- " + j.getTipus() + " " + j.getId());
+                van = true;
+            }
+        }
+        if (!van) System.out.println("Ehhez a megállóhoz nincs járat.");
+    }

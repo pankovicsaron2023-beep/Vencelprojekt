@@ -1,0 +1,16 @@
+package kozlekedes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class KozlekedesManager {
+    private List<Jarat> jaratok;
+    private List<Megallo> osszesMegallo;
+
+    public KozlekedesManager() {
+        this.jaratok = new ArrayList<>();
+        this.osszesMegallo = new ArrayList<>();
+    }
+
+    public List<Jarat> getJaratok() { return jaratok; }
+}

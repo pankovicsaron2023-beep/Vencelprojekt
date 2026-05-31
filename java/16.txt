@@ -1,0 +1,11 @@
+    private void menuVezerles(int opcio) {
+        switch (opcio) {
+            case 1 -> menetrendJaratSzerint();
+            case 2 -> menetrendMegalloSzerint();
+            case 3 -> utvonalTervezoMenu();
+            case 4 -> kesesSzimulacioMenu();
+            case 5 -> ujJaratMenu();
+            case 0 -> System.out.println("Program leállítása...");
+            default -> System.out.println("Érvénytelen opció!");
+        }
+    }

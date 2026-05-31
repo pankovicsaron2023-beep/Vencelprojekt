@@ -1,0 +1,22 @@
+package kozlekedes;
+
+import java.util.Scanner;
+
+public class MenuRendszer {
+    private KozlekedesManager manager;
+    private Scanner scanner;
+
+    public MenuRendszer(KozlekedesManager manager) {
+        this.manager = manager;
+        this.scanner = new Scanner(System.in);
+    }
+
+    public void indit() {
+        int opcio = -1;
+        while (opcio != 0) {
+            menuKiiras();
+            opcio = szamotBeolvas();
+            menuVezerles(opcio);
+        }
+    }
+}

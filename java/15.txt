@@ -1,0 +1,10 @@
+   private int szamotBeolvas() {
+        while (!scanner.hasNextInt()) {
+            System.out.println("[Hiba] Nem számot adott meg! Próbálja újra.");
+            scanner.next();
+            System.out.print("Válasszon opciót: ");
+        }
+        int szam = scanner.nextInt();
+        scanner.nextLine(); 
+        return szam;
+    }
