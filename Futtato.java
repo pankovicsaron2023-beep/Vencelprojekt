@@ -6,10 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// ==========================================
-// 1. MODELL RÉTEG (ÜZLETI OBJEKTUMOK)
-// ==========================================
-
 class Megallo {
     private String nev;
 
@@ -85,10 +81,6 @@ class Jarat {
     }
 }
 
-// ==========================================
-// 2. ÜZLETI LOGIKA (CONTROLLER / MANAGER)
-// ==========================================
-
 class KozlekedesManager {
     private List<Jarat> jaratok;
     private List<Megallo> osszesMegallo;
@@ -147,10 +139,6 @@ class KozlekedesManager {
         return eredmenyek;
     }
 }
-
-// ==========================================
-// 3. ADATKEZELŐ RÉTEG (FÁJLMENTÉS)
-// ==========================================
 
 class AdatKezelo {
     private static final String FAJL_NEV = "menetrend_adatok.txt";
@@ -221,10 +209,6 @@ class AlapAdatGenerator {
         manager.jaratHozzaadas(v46);
     }
 }
-
-// ==========================================
-// 4. FELHASZNÁLÓI FELÜLET RÉTEG (CLI UI)
-// ==========================================
 
 class MenuRendszer {
     private KozlekedesManager manager;
@@ -374,10 +358,6 @@ class MenuRendszer {
         }
     }
 }
-
-// ==========================================
-// 5. INDÍTÓ (MAIN)
-// ==========================================
 
 public class Futtato {
     public static void main(String[] args) {
